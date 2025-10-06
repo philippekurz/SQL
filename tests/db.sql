@@ -13,7 +13,7 @@ CREATE TABLE client(
    nom VARCHAR(50) NOT NULL,
    prenom VARCHAR(50) NOT NULL,
    adresse TEXT,
-   id_pays BIGINT NOT NULL,
+   id_pays BIGINT,
    email VARCHAR(50) NOT NULL UNIQUE,
    FOREIGN KEY(id_pays) REFERENCES pays(id),
    INDEX (nom),
