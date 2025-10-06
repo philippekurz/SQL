@@ -20,6 +20,7 @@ BEGIN
     WHERE id = NEW.id_article;
 END$$
 
+DROP TRIGGER IF EXISTS maj_totaux_commande;
 CREATE TRIGGER maj_totaux_commande
 AFTER INSERT ON commande_ligne
 FOR EACH ROW
